@@ -21,6 +21,7 @@ public class CheckTest {
         WebDriver driver = signPage.signIn();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         logger.info("Login in system");
+        
 
         driver.quit();
     }
