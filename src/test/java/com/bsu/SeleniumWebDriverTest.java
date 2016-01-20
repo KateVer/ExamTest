@@ -34,11 +34,23 @@ public class SeleniumWebDriverTest {
     }
 
     @Test
+    public void receiveMess(){
+        logger.info("oneCanSearch");
+        Assert.assertTrue(steps.searchPerformed("Сирия"));
+    }
+
+    @Test
     public void sendNoReciever(){
         logger.info("sendNoReciever");
-        steps.loginYandex(USER_EMAIL, PASSWORD);
-        Assert.assertFalse(steps.sendMessage("",""));
+        Assert.assertTrue(steps.searchPerformed("Сирия"));
     }
+
+//    @Test
+//    public void sendNoReciever(){
+//        logger.info("sendNoReciever");
+//        steps.loginYandex(USER_EMAIL, PASSWORD);
+//        Assert.assertFalse(steps.sendMessage("",""));
+//    }
 
     @Test
     public void sendReciever(){
